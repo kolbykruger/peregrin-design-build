@@ -5,7 +5,7 @@ $(document).ready(function() {
         new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook: 0.85,
-            reverse: true
+            reverse: false
         }).setClassToggle(this, "active").addTo(controller)
         .addTo(controller);
     })
@@ -33,7 +33,7 @@ $('.scrollToTop').click(function(){
 $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 
 //Nav
-    //$( ".nav > .drop_trigger, .mobile_nav > .drop_trigger" ).each(function(){$( this ).children('a:first').attr( "onclick", "return false" );});
+    $( ".nav > .drop_trigger, .mobile_nav .drop_trigger" ).each(function(){$( this ).children('a:first').attr( "onclick", "return false" );});
 
     $('.nav .drop_menu').each(function() {
        if ($(this).find(".item").length >= 8) {
@@ -124,14 +124,40 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 		$('button.navicon').attr( "aria-label", "Open Mobile Menu");
 	});
 
+    $('.mobile_nav .drop_trigger >').click(function(){
+        var parent = $(this).closest('.drop_trigger');
+        var icon = parent.find('.drop_trigger_icon');
+        var aonclick = parent.find('a:first').is('[onclick]');
+        if($(this).is('a')){
+            if(aonclick === true){
+            	$('.drop_trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
+            	parent.toggleClass("open");
+                if(parent.hasClass('open')){
+                    $(icon).find('i').attr( "class", "fal fa-minus");
+                }else{
+                    $(icon).find('i').attr( "class", "fal fa-plus");
+                }
+            }
+        }
+        if($(this).hasClass('drop_trigger_icon')){
+            parent.toggleClass("open");
+    		$('.mobile_nav > .drop_trigger').not(parent).removeClass("open").find('i').attr( "class", "fal fa-plus");
+            if(parent.hasClass('open')){
+                $(icon).find('i').attr( "class", "fal fa-minus");
+            }else{
+                $(icon).find('i').attr( "class", "fal fa-plus");
+            }
+        }
+    });
+
 //Slideshow
 $('.slideshow').slick({
   autoplay: true,
   autoplaySpeed: 5000,
   dots: true,
   infinite: true,
-  fade: false,
-  speed: 300,
+  fade: true,
+  speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow:'<button class="prev" title="Previous Slide"><i class="fal fa-chevron-left"></i></button>',
