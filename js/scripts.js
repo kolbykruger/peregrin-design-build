@@ -30,16 +30,18 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 
 	$('.navicon').click(function() {
 	    if($('.mobile_nav').is(':visible')){
-    	    $('.mobile_nav').fadeOut(100).attr('aria-hidden', 'true').attr('aria-expanded', 'false');
-    		$('body,html').css({'overflow':'auto','height':'auto'});
-    		$('.headerWrap').css({'position':'relative','z-index':'0'});
-    		$('.navicon').find('i').attr( "class", "fal fa-bars");
+    	    $('.mobile_nav').fadeOut(500).removeClass('open').attr('aria-hidden', 'true').attr('aria-expanded', 'false');
+            $('.navicon').removeClass('open');
+            $('.mobile_icons').css('position','absolute');
+            $('.header .logo').css('position','absolute').removeClass('active');
+    		//$('.navicon').find('i').attr( "class", "fal fa-bars");
     		$('button.navicon').attr( "aria-label", "Open Mobile Menu");
 	    }else{
-	        $('.mobile_nav').fadeIn(400).attr('aria-hidden', 'false').attr('aria-expanded', 'true');
-	        $('body,html').css({'overflow':'hidden','height':'0'});
-	        $('.headerWrap').css({'position':'fixed','z-index':'9999'});
-	        $('.navicon').find('i').attr( "class", "fal fa-times");
+	        $('.mobile_nav').fadeIn(500).addClass('open').attr('aria-hidden', 'false').attr('aria-expanded', 'true');
+	        //$('.navicon').find('i').attr( "class", "fal fa-times");
+            $('.navicon').addClass('open');
+            $('.mobile_icons').css('position','fixed');
+            $('.header .logo').css('position','fixed').addClass('active');
 	        $('button.navicon').attr( "aria-label", "Close Mobile Menu");
 	    }
 	});
