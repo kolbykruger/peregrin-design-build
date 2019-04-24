@@ -1,10 +1,23 @@
+//ScrollMagic
+$(document).ready(function() {
+    var controller = new ScrollMagic.Controller;
+    $(".projects .item").each(function() {
+        new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook: 0.85,
+            reverse: true
+        }).setClassToggle(this, "active").addTo(controller)
+        .addTo(controller);
+    })
+});
+
 // Links return false
 $('a:not(.force), button:not(.force), input[type="submit"]:not(.force)').click(function() {
     return false
 })
 
 //Scroll to Top
-$('body').append('<a href="" onclick="event.preventDefault()" class="event_track" data-cat="Extra" data-label="Back To Top"><i aria-hidden="true" class="far fa-arrow-alt-circle-up scrollToTop" title="Scroll Up"></i></a>');
+$('body').append('<a href="" onclick="event.preventDefault()" class="event_track" data-cat="Extra" data-label="Back To Top"><i aria-hidden="true" class="fal fa-chevron-up scrollToTop" title="Scroll Up"></i></a>');
 $(window).scroll(function(){
 	if ($(this).scrollTop() > 100) {
 		$('.scrollToTop').fadeIn(100);
