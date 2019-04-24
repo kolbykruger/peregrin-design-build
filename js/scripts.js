@@ -1,7 +1,7 @@
 //ScrollMagic
 $(document).ready(function() {
     var controller = new ScrollMagic.Controller;
-    $(".projects .item").each(function() {
+    $(".projects .container").each(function() {
         new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook: 0.85,
