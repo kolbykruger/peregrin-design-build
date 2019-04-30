@@ -1,11 +1,11 @@
 //ScrollMagic
 $(document).ready(function() {
     var controller = new ScrollMagic.Controller;
-    $(".projects .container").each(function() {
+    $(".projects .container, .team .group, .intro_text").each(function() {
         new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook: 0.85,
-            reverse: false
+            reverse: true
         }).setClassToggle(this, "active").addTo(controller)
         .addTo(controller);
     })
@@ -149,6 +149,21 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
             }
         }
     });
+
+//Slideshow
+$('.intro_text_slider').slick({
+  autoplay: true,
+  autoplaySpeed: 5000,
+  arrows: false,
+  dots: true,
+  infinite: true,
+  fade: true,
+  speed: 1000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow:'<button class="prev" title="Previous Slide"><i class="fal fa-chevron-left"></i></button>',
+  nextArrow:'<button class="next" title="Next Slide"><i class="fal fa-chevron-right"></i></button>'
+});
 
 //Slideshow
 $('.slideshow').slick({
