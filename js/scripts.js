@@ -165,20 +165,6 @@ $('.intro_text_slider').slick({
   nextArrow:'<button class="next" title="Next Slide"><i class="fal fa-chevron-right"></i></button>'
 });
 
-//Slideshow
-$('.slideshow').slick({
-  autoplay: true,
-  autoplaySpeed: 5000,
-  dots: true,
-  infinite: true,
-  fade: true,
-  speed: 1000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  prevArrow:'<button class="prev" title="Previous Slide"><i class="fal fa-chevron-left"></i></button>',
-  nextArrow:'<button class="next" title="Next Slide"><i class="fal fa-chevron-right"></i></button>'
-});
-
 $(window).on('load resize orientationchange', function() {
     $('.mobile_slider').each(function(){
     var $carousel = $(this);
