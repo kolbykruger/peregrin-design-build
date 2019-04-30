@@ -171,7 +171,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 .search .autocomplete-items a.autocomplete-active{background: #ef4438; color: #ffffff;}
 
 /* Slideshow */
-.slideshow{position: relative; user-select: none; width: 100vw; height: 100vh; overflow: hidden; margin: 0 auto;}
+.slideshow{position: relative; user-select: none; width: 100vw; height: 100vh; overflow: hidden; margin: 0 auto; z-index: 1;}
 .slideshow .slide{position: relative; user-select: none; width: 100vw; height: 100vh; position: relative; background-size: cover; background-position: center; outline: none;}
 .slideshow .slide::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(../images/dot-grid-4x4.png); background-size: 3px; background-color: rgba(0,0,0,0.35);}
 .slideshow .info{user-select: none; width: 100%; text-align: center; position: absolute; top: 50%; padding: 3em; z-index: 200; transform: translateY(-50%);}
