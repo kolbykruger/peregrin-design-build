@@ -35,11 +35,11 @@ $('iframe[src*="youtube"]').wrap('<div class="responsiveIframe"/>');
 //Nav
     $( ".nav > .drop_trigger, .mobile_nav .drop_trigger" ).each(function(){$( this ).children('a:first').attr( "onclick", "return false" );});
 
-    $('.nav .drop_menu').each(function() {
-       if ($(this).find(".item").length >= 8) {
-           $(this).addClass('column_nav');
-       }
-    });
+    // $('.nav .drop_menu').each(function() {
+    //    if ($(this).find(".item").length >= 8) {
+    //        $(this).addClass('column_nav');
+    //    }
+    // });
 
 	$('.navicon').click(function() {
 	    if($('.mobile_nav').is(':visible')){
