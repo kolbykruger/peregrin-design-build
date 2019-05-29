@@ -26,33 +26,58 @@
 
 <div class="headerWrap">
     <div class="header" role="banner">
+
         <div class="logo">
             <a href="#">
                 <img src="images/peregrine-logo.svg" title="Return Home" alt="Logo"/>
             </a>
         </div>
 
-        <nav class="nav">
-            <div class="item drop_trigger"><a href="#">Portfolio <i class="fas fa-caret-down" aria-hidden="true"></i></a>
-                <div class="drop_menu">
-                    <div class="item"><a href="#">All Projects</a></div>
-                    <div class="item"><a href="#">Kitchen / Dining</a></div>
-                    <div class="item"><a href="#">Bathroom / Bedroom</a></div>
-                    <div class="item"><a href="#">Living Areas</a></div>
-                    <div class="item"><a href="#">Condominiums</a></div>
-                    <div class="item"><a href="#">Mudrooms</a></div>
-                    <div class="item"><a href="#">Details</a></div>
-                    <div class="item"><a href="#">Custom Homes</a></div>
-                    <div class="item"><a href="#">Commercial</a></div>
+        <div class="mobile_icons">
+            <a class="navicon" aria-label="Open Menu" title="Menu">
+                <span class="navicon-text">Menu</span>
+                <span id="menu-trigger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </a>
+        </div>
+
+        <div class="mobile_nav" aria-hidden="true">
+            <div class="nav-container">
+                <div class="item drop_trigger" aria-haspopup="true">
+                    <a href="#" tabindex="-1" onclick="return false">Portfolio</a>
+                    <div class="drop_menu" aria-hidden="true">
+                        <div class="item"><a href="#" class="">All Projects</a></div>
+                        <div class="item"><a href="#" class="">Kitchen / Dining</a></div>
+                        <div class="item"><a href="#" class="">Bathroom / Bedroom</a></div>
+                        <div class="item"><a href="#" class="">Living Areas</a></div>
+                        <div class="item"><a href="#" class="">Condominiums</a></div>
+                        <div class="item"><a href="#" class="">Mudrooms</a></div>
+                        <div class="item"><a href="#" class="">Details</a></div>
+                        <div class="item"><a href="#" class="">Custom Homes</a></div>
+                        <div class="item"><a href="#" class="">Commercial</a></div>
+                    </div>
                 </div>
-            </div>
-            <div class="item drop_trigger"><a href="#">About <i class="fas fa-caret-down" aria-hidden="true"></i></a>
-                <div class="drop_menu">
-                    <div class="item"><a href="#">About Us</a></div>
-                    <div class="item"><a href="#">Design</a></div>
-                    <div class="item"><a href="#">Build</a></div>
-                    <div class="item"><a href="#">Sustainability</a></div>
-                    <div class="item"><a href="#">Staff</a></div>
+                <div class="item drop_trigger" aria-haspopup="true">
+                    <a href="#" tabindex="-1" onclick="return false">About</a>
+                    <div class="drop_menu" aria-hidden="true">
+                        <div class="item"><a href="#" class="">About Us</a></div>
+                        <div class="item"><a href="#" class="">Design</a></div>
+                        <div class="item"><a href="#" class="">Build</a></div>
+                        <div class="item"><a href="#" class="">Sustainability</a></div>
+                        <div class="item"><a href="#" class="">Staff</a></div>
+                    </div>
+                </div>
+                <div class="item"><a href="#" tabindex="-1">Press</a></div>
+                <div class="item"><a href="#" tabindex="-1">Journal</a></div>
+                <div class="item"><a href="#" tabindex="-1">Contact</a></div>
+                <div class="item social">
+                    <a href="#" target="_blank" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" title="Find us on Houzz"><i class="fab fa-houzz"></i></a>
+                    <a href="#" target="_blank" title="Contact Us"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="item"><a href="#">Press</a></div>
@@ -75,13 +100,6 @@
                 <i class="far fa-long-arrow-alt-right"></i>
             </a>
         </div>
-        <!--div class="info">
-            <h1 class="title">
-                <span>Award Winning</span>
-                <span>Architects & Designers</span></span>
-                <span>in Vermont</span>
-            </h1>
-        </di-->
     </div>
 
 </div>
@@ -213,44 +231,12 @@
     <h1><a href="" target="_blank">Who We Are</a></h1>
     <div class="group">
 
-        <div class="item">
-            <a href="#">
-                <div class="image">
-                    <img src="images/team/male.jpg" alt="">
-                </div>
-                <div class="info">
-                    <h3 class="name">Tim Frost</h3>
-                    <p class="title">Owner</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="item">
-            <a href="#">
-                <div class="image">
-                    <img src="images/team/manly.jpg" alt="">
-                </div>
-                <div class="info">
-                    <h3 class="name">Cliff Deetjen</h3>
-                    <p class="title">Design</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="item">
-            <a href="#">
-                <div class="image">
-                    <img src="images/team/female.jpg" alt="">
-                </div>
-                <div class="info">
-                    <h3 class="name">Jillian Bartolo</h3>
-                    <p class="title">Design</p>
-                </div>
-            </a>
-        </div>
+    <a href="#">
+        <img src="images/team.jpg" alt="">
+    </a>
 
     </div>
-    <div class="buttons center"><a href="#" class="button">Our Staff</a></div>
+    <div class="buttons center"><a href="#" class="button">Meet our staff</a></div>
 </div>
 
 <div class="instagram_widget">
@@ -270,8 +256,8 @@
             <div class="item"><a href="#" target="_blank" title="Find us on Houzz">Houzz</a></div>
         </div>
         <div class="section">
-            Peregrine Design / Build<br />
-            49 Commerce Avenue Unit A1<br />
+            Peregrine Design / Build<br/>
+            49 Commerce Avenue Unit A1<br/>
             South Burlington, Vermont 05403
         </div>
         <div class="section">
