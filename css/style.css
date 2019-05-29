@@ -81,7 +81,7 @@ button.button, input[type="submit"].button {cursor: pointer; font-family: inheri
 
 /*Header*/
 .headerWrap{width: 100%; position: absolute; top: 0; z-index: 10;}
-.header{width: 100%; padding: 1em 3em; position: relative; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
+.header{width: 100%; position: relative; display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;}
 .header .logo{width: 50%; max-width: 260px; position: absolute; left: 1em; top: 1em; user-select: none; z-index: 9999999;}
 .header .logo a{background: rgba(255,255,255,0.5); padding: 0.5em; display: block; text-decoration: none; color: #fff; font-weight: 600; font-size: 3rem; transition: 150ms ease-in-out;}
 .header .logo a::before {display: none;}
